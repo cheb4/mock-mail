@@ -3,6 +3,7 @@
 import Input from "./components/input";
 import Button from "./components/Button";
 import { useState } from "react";
+import logToConsole from "./helper/helpers";
 
 function App() {
   const [login, setLogin] = useState("");
@@ -10,17 +11,20 @@ function App() {
 
   const handleLoginInput = (event) => {
     event.preventDefault();
-    console.log("handling input of login ");
-    console.log(event.target.value);
-    console.log("handling input of login ");
+    logToConsole(event.target.value, "login");
     setLogin(event.target.value);
   };
   const handlePasswordInput = (event) => {
     event.preventDefault();
-    console.log("handling input of password ");
-    console.log(event.target.value);
-    console.log("handling input of password ");
+    logToConsole(event.target.value, "password");
     setPassword(event.target.value);
+  };
+
+  const loginHandler = () => {
+    console.log("somthing will happen here login");
+  };
+  const registerHandler = () => {
+    console.log("somthing will happen here register");
   };
 
   const Welcome = () => {
@@ -45,13 +49,26 @@ function App() {
       <Input
         handler={handlePasswordInput}
         id={"passwordField"}
-        placeholder=""
         type="password"
         name="passwordField"
         label="passwordField"
       />
-      <Button />
-      <Button />
+      <Button
+        handler={loginHandler}
+        value="login"
+        id="loginButton"
+        type="button"
+        name="loginButton"
+        label="loginButton"
+      />
+      <Button
+        handler={registerHandler}
+        value="register"
+        id="loginButton"
+        type="button"
+        name="loginButton"
+        label="loginButton"
+      />
       <br />
       <div>login: {login}</div>
       <div>password: {password}</div>
