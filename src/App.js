@@ -1,17 +1,19 @@
 import { useState } from "react";
-import Welcome from "./welcome";
+// import Welcome from "./pages/welcome";
+import Main from "./pages/main/main";
 function App() {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
+  // const [login, setLogin] = useState("");
+  // const [password, setPassword] = useState("");
 
   return (
     <div>
-      <Welcome
+      {/* <Welcome
         login={login}
         setLogin={setLogin}
         password={password}
         setPassword={setPassword}
-      />
+      /> */}
+      <Main />
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import Input from "./components/input";
-import Button from "./components/Button";
-import logToConsole from "./helper/helpers";
+import Input from "../components/input";
+import Button from "../components/Button";
+import logToConsole from "../helper/helpers";
 
 function Welcome(props) {
   logToConsole(props, "props");
