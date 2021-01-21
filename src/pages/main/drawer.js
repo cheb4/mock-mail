@@ -1,12 +1,12 @@
 import React from "react";
 
 function Drawer(props) {
-  const { sender, subject, id } = props;
+  const { sender, subject, id, handler } = props;
   return (
-    <div>
-      <h3> sender: {sender}</h3>
-      <h3> subject: {subject}</h3>
-      <h4>id :{id}</h4>
+    <div className="drawer" onClick={() => handler(id)}>
+      <p> sender: {sender}</p>
+      <p> subject: {subject}</p>
+      <p>id :{id}</p>
     </div>
   );
 }

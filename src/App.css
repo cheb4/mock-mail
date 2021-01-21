@@ -1,0 +1,16 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr  1fr; 
+}
+
+.drawer{
+    /* color: red; */
+    border: 2px solid black;
+   /* order: 2;  */
+}
+.displayWindow{
+    /* color: red; */
+    border: 2px solid black;
+    /* order: 1; */
+
+}
