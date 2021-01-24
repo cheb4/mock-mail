@@ -1,16 +1,23 @@
 .main{
     display: grid;
-    grid-template-columns: 1fr  1fr; 
+    grid-template-columns: 0.1fr 1fr  1fr; 
 }
 
 .drawer{
-    /* color: red; */
     border: 2px solid black;
-   /* order: 2;  */
+}
+.drawer>p{
+    margin-left: 1em;
 }
 .displayWindow{
-    /* color: red; */
     border: 2px solid black;
-    /* order: 1; */
 
+}
+.navigation{
+    border: 2px solid black;
+
+}
+.nav-button{
+    font-size: 1.5rem; 
+    border-bottom: 2px solid black;
 }

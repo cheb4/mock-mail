@@ -3,9 +3,9 @@ import React from "react";
 import { useState } from "react";
 import Drawer from "./drawer";
 import DisplayWindow from "./DisplayWindow";
+import Navigation from "./Navigation";
 // helper
 // import logToConsole from "../../helper/helpers";
-
 function Main() {
   const mockData = [
     {
@@ -30,7 +30,6 @@ function Main() {
         "nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam",
     },
   ];
-
   const [email, setemail] = useState("");
   // const [emailId, setemailId] = useState("");
   // change after mocup
@@ -64,8 +63,10 @@ function Main() {
       </div>
     );
   };
+
   return (
     <div className="main">
+      <Navigation />
       <DrawerArray />
       <DisplayWindow data={email} />
     </div>
